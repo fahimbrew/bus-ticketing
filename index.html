@@ -1,15 +1,487 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bus Ticketing</title>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Raleway font-family -->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <!-- inter font family -->
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- tailwind cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1DD100',
+                        secondary: '#030712',
+                        couponOne: '#FFBF0F',
+                        couponTwo: '#F78C9C',
+
+
+                    },
+                    fontFamily: {
+                        Raleway: 'Raleway',
+                        Inter: 'Inter',
+
+
+
+                    },
+                },
+            },
+        }
+    </script>
 </head>
 
-<body>
-    <h1>Hi Welcome to my page!</h1>
+<body class="font-Raleway">
+    <header>
+        <!-- navbar starts -->
+        <nav class="container mx-auto">
+            <div class="navbar bg-base-100">
+                <div class="navbar-start">
+                    <div class="dropdown">
+                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </div>
+                        <ul tabindex="0"
+                            class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                            <li><a>Home</a></li>
+                            <li><a>About</a></li>
+                            <li>
+                                <a href="">Destination</a>
+                            </li>
+                            <li><a>Search</a></li>
+                        </ul>
+                    </div>
+                    <a class="btn btn-ghost text-xl font-bold">P-Ticket</a>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                    <ul class="menu menu-horizontal px-1">
+                        <li><a>Home</a></li>
+                        <li><a>About</a></li>
+                        <li>
+                            <a href="">Destination</a>
+                        </li>
+                        <li><a>Search</a></li>
+                    </ul>
+                </div>
+                <div class="navbar-end">
+                    <a class="btn bg-[#e8fae5]">Bus <img src="images/bus-icon.png" alt=""></a>
+                </div>
+            </div>
+        </nav>
+        <!-- navbar ends -->
+        <!-- hero section starts -->
+        <div class="container mx-auto relative">
+            <div class="hero h-[550px] rounded-lg" style="background-image: url('/images/banner.png');">
+                <div class="hero-overlay bg-opacity-0"></div>
+                <div class="hero-content text-neutral-content text-center">
+                    <div>
+                        <h1 class="mb-5 text-5xl font-bold">End-to-End Travel with</h1>
+                        <h1 class="mb-5 text-5xl font-bold text-primary">P Paribahan</h1>
+                        <p class="w-11/12 mx-auto md:w-7/12 mb-3">Yes, you can run unit tests and view the results
+                            directly
+                            within the
+                            app. The integrated
+                            testing features allow for a streamlined .</p>
 
+                        <button class="btn bg-primary border-0">Buy Tickets</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- hero section ends -->
+        <!-- container grid starts -->
+        <div
+            class="lg:absolute left-44 top-[580px] font-Inter w-9/12 mx-auto grid grid-cols-1 lg:grid-cols-3 gap-3 mb-10">
+            <!-- childs -->
+            <div
+                class="flex bg-white justify-center items-center p-3 border-b-lime-300 border-b-2 border space-x-5 rounded-3xl">
+                <img src="images/people.png" alt="">
+                <div>
+                    <h1 class="text-xl font-black">500K+</h1>
+                    <p class="text-gray-600">Registered Users</p>
+                </div>
+            </div>
+            <!-- childs -->
+            <!-- childs -->
+            <div
+                class="flex bg-white border justify-center items-center p-3 border-b-lime-300 border-b-2 space-x-5 rounded-3xl">
+                <img src="images/ticket-cupon.png" alt="">
+                <div>
+                    <h1 class="text-xl font-black">1.7 lakhs</h1>
+                    <p class="text-gray-600">Ticket Sold</p>
+                </div>
+            </div>
+            <!-- childs -->
+            <!-- childs -->
+            <div
+                class="flex bg-white border rounded-3xl justify-center items-center p-3 border-b-lime-300  border-b-2 space-x-5">
+                <img src="images/stoppage.png" alt="">
+                <div>
+                    <h1 class="text-xl font-black">80K+</h1>
+                    <p class="text-gray-600">Rental partners</p>
+                </div>
+            </div>
+            <!-- childs -->
+        </div>
+        <!-- container grid ends -->
+
+
+    </header>
+    <main>
+        <!-- section 1 starts -->
+        <section class="container mx-auto ">
+            <h1 class="mt-28 text-center text-3xl font-black">Best Offers For You</h1>
+            <!-- offer section starts -->
+            <section class="font-Inter mt-20 flex flex-col lg:flex-row gap-2 lg:justify-around lg:p-10">
+                <!-- coupon 1 starts -->
+                <div class="bg-couponOne grid grid-cols-3 rounded-2xl">
+                    <div class="flex justify-center items-center px-3">
+                        <div>
+                            <h1 class="text-2xl font-black">15% OFF</h1>
+                            <p class="text-gray-800 font-light">on your next purchase</p>
+                            <p class="font-extralight text-sm">use by January 2024</p>
+                        </div>
+                    </div>
+                    <img src="images/cupon-devider.png" alt="">
+                    <div class="flex justify-center items-center pr-20">
+                        <div class="font-Raleway">
+                            <h1 class="text-2xl font-black">NEW15</h1>
+                            <p class="text-gray-700">Coupon Code</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- coupon 1 ends -->
+                <!-- coupon 2 starts -->
+                <div class="bg-couponTwo grid grid-cols-3 rounded-2xl">
+                    <div class="flex justify-center items-center px-3">
+                        <div>
+                            <h1 class="text-2xl font-black">20% OFF</h1>
+                            <p class="text-gray-800 font-light">on your next purchase</p>
+                            <p class="font-extralight text-sm">use by January 2024</p>
+                        </div>
+                    </div>
+                    <img src="images/cupon-devider.png" alt="">
+                    <div class="flex justify-center items-center pr-20">
+                        <div class="font-Raleway">
+                            <h1 class="text-2xl font-black">Couple 20</h1>
+                            <p class="text-gray-700">Coupon Code</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- coupon 2 ends -->
+            </section>
+            <!-- offer section ends -->
+        </section>
+        <!-- section 1 ends -->
+        <!-- section 2 starts -->
+        <section class="bg-[#F7F8F8] my-20 pb-10">
+            <!-- main div starts -->
+
+            <div class="container mx-auto">
+                <!-- text div starts -->
+                <div class="text-center py-10 space-y-2 lg:w-5/12 lg:mx-auto">
+                    <h1 class="font-bold text-2xl">P.H Paribahan</h1>
+                    <p class="text-gray-700">Yes, you can run unit tests and view the results directly within the app.
+                        The
+                        integrated testing
+                        features allow for a streamlined .</p>
+                </div>
+                <!-- text div ends -->
+                <!-- container starts -->
+                <div class="bg-white rounded-xl grid grid-cols-1 lg:grid-cols-12">
+                    <!-- 1st div starts -->
+                    <div class="lg:col-span-8">
+                        <div class="flex justify-between items-center lg:p-10">
+                            <div class="flex gap-2 p-2">
+                                <img src="images/bus-logo.png" alt="">
+                                <div class="space-y-2">
+                                    <h1 class="text-xl font-bold">GreenLine Paribahan</h1>
+                                    <p class="text-sm font-light">Coach-009-WEB ! AC_Business</p>
+                                </div>
+                            </div>
+                            <!-- btn -->
+                            <div>
+                                <button class="flex gap-1 bg-[#e8fae5] text-primary px-3 py-2 rounded-xl"><img
+                                        src="images/seat-green.png" alt="">40 Seats
+                                    Left</button>
+
+                            </div>
+                        </div>
+                        <!-- route starts -->
+                        <div class="bg-[#F7F8F8] rounded-lg lg:pl-10 mt-5 mx-2">
+                            <div class="flex justify-between">
+                                <h2 class="text-xl font-bold p-3">Route</h2>
+                                <h2 class="text-xl font-bold p-3">Dhaka - Sylhet</h2>
+                            </div>
+                            <hr class="border-dotted border-2 mx-auto">
+                            <div class="flex justify-between">
+                                <h2 class="text-xl font-bold p-3">Departure Time</h2>
+                                <h2 class="text-xl font-bold p-3">9:00 PM</h2>
+                            </div>
+                            <hr class="border-dotted border-2 mx-auto">
+
+                            <div class="grid grid-cols-3 gap-2">
+                                <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">Boarding Point -
+                                    Laxmipur</button>
+                                <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">Dropping Point -
+                                    Bogura</button>
+                                <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">Est. Time - 11 Hour</button>
+
+                            </div>
+
+                        </div>
+                        <!-- route ends -->
+
+
+                    </div>
+                    <!-- 1st div ends -->
+                    <!-- divider img starts -->
+                    <img class="lg:col-span-1 hidden lg:flex" src="images/info-devider.png" alt="">
+                    <!-- divider img ends -->
+                    <!-- last div starts -->
+                    <div class="lg:col-span-2 flex justify-center items-center">
+                        <div class="space-y-2 flex flex-col items-center justify-center">
+                            <img src="images/fare.png" alt="">
+                            <div>
+                                <h1 class="text-2xl font-bold text-center">550 Taka</h1>
+                                <p class="text-center font-light">Per Seat</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- last div ends -->
+
+                </div>
+                <!-- container ends -->
+
+            </div>
+            <!-- main div ends -->
+
+        </section>
+        <!-- section 2 ends -->
+
+        <!-- seat booking section starts -->
+        <section class="bg-white px-8 py-5 w-11/12 mx-auto rounded-2xl shadow-sm grid grid-cols-3 gap-5">
+            <!-- left div starts -->
+            <div class="col-span-2">
+                <!-- heading -->
+                <div>
+                    <h2 class="text-xl text-secondary font-semibold">Select Your Seat</h2>
+                </div>
+                <div class="border-b-2 border-dashed my-3"></div>
+                <div class="flex justify-between items-center">
+                    <p><i class="fa-solid fa-couch"></i>
+                        <span>Available</span>
+                    </p>
+                    <p class="text-primary"><i class="fa-solid fa-couch"></i>
+                        <span>Selected</span>
+                    </p>
+                </div>
+                <div class="border-b-2 border-dashed my-3"></div>
+                <!-- seat section starts here -->
+                <section class="grid grid-cols-12  gap-y-5 font-Inter">
+                    <!-- front seat -->
+                    <div class="col-span-12 grid grid-cols-12">
+                        <div class="col-span-11"></div>
+                        <div class="col-span-1"><button class="btn btn-md hover:bg-secondary hover:text-white"><img
+                                    src="images/icons8-wheel-50.png" alt=""></button></div>
+                    </div>
+
+                    <!-- front seat end -->
+                    <!-- row-A starts -->
+
+                    <div class="col-span-12 grid grid-cols-11 items-center gap-5">
+                        <p class="col-span-1">A</p>
+                        <button
+                            class="col-span-2 btn btn-md hover:bg-secondary hover:text-white transition-colors duration-200 ease-in-out">A1</button>
+                        <button
+                            class="col-span-2 btn btn-md hover:bg-secondary hover:text-white transition-colors duration-200 ease-in-out">A2</button>
+                        <p class="col-span-2"></p>
+                        <button
+                            class="col-span-2 btn btn-md hover:bg-secondary hover:text-white transition-colors duration-200 ease-in-out">A3</button>
+                        <button
+                            class="col-span-2 btn btn-md hover:bg-secondary hover:text-white transition-colors duration-200 ease-in-out">A4</button>
+
+                    </div>
+                    <!-- row-A ends -->
+                    <!-- row B starts -->
+                    <div class="col-span-12 grid grid-cols-11 items-center gap-5">
+                        <p class="col-span-1">B</p>
+                        <button
+                            class="col-span-2 btn btn-md hover:bg-secondary hover:text-white transition-colors duration-200 ease-in-out">B1</button>
+                        <button
+                            class="col-span-2 btn btn-md hover:bg-secondary hover:text-white transition-colors duration-200 ease-in-out">B2</button>
+                        <p class="col-span-2"></p>
+                        <button
+                            class="col-span-2 btn btn-md hover:bg-secondary hover:text-white transition-colors duration-200 ease-in-out">B3</button>
+                        <button
+                            class="col-span-2 btn btn-md hover:bg-secondary hover:text-white transition-colors duration-200 ease-in-out">B4</button>
+
+                    </div>
+
+                    <!-- row B ends -->
+                    <!-- row C starts -->
+                    <div class="col-span-12 grid grid-cols-11 items-center gap-5">
+                        <p class="col-span-1">C</p>
+                        <button
+                            class="col-span-2 btn btn-md hover:bg-secondary hover:text-white transition-colors duration-200 ease-in-out">C1</button>
+                        <button
+                            class="col-span-2 btn btn-md hover:bg-secondary hover:text-white transition-colors duration-200 ease-in-out">C2</button>
+                        <p class="col-span-2"></p>
+                        <button
+                            class="col-span-2 btn btn-md hover:bg-secondary hover:text-white transition-colors duration-200 ease-in-out">C3</button>
+                        <button
+                            class="col-span-2 btn btn-md hover:bg-secondary hover:text-white transition-colors duration-200 ease-in-out">C4</button>
+
+                    </div>
+                    <!-- row C ends -->
+
+                    <!-- row D starts -->
+                    <div class="col-span-12 grid grid-cols-11 items-center gap-5">
+                        <p class="col-span-1">D</p>
+                        <button
+                            class="col-span-2 btn btn-md hover:bg-secondary hover:text-white transition-colors duration-200 ease-in-out">D1</button>
+                        <button
+                            class="col-span-2 btn btn-md hover:bg-secondary hover:text-white transition-colors duration-200 ease-in-out">D2</button>
+                        <p class="col-span-2"></p>
+                        <button
+                            class="col-span-2 btn btn-md hover:bg-secondary hover:text-white transition-colors duration-200 ease-in-out">D3</button>
+                        <button
+                            class="col-span-2 btn btn-md hover:bg-secondary hover:text-white transition-colors duration-200 ease-in-out">D4</button>
+
+                    </div>
+                    <!-- row D ends -->
+                    <!-- row E starts -->
+                    <div class="col-span-12 grid grid-cols-11 items-center gap-5">
+                        <p class="col-span-1">E</p>
+                        <button
+                            class="col-span-2 btn btn-md hover:bg-secondary hover:text-white transition-colors duration-200 ease-in-out">E1</button>
+                        <button
+                            class="col-span-2 btn btn-md hover:bg-secondary hover:text-white transition-colors duration-200 ease-in-out">E2</button>
+                        <p class="col-span-2"></p>
+                        <button
+                            class="col-span-2 btn btn-md hover:bg-secondary hover:text-white transition-colors duration-200 ease-in-out">E3</button>
+                        <button
+                            class="col-span-2 btn btn-md hover:bg-secondary hover:text-white transition-colors duration-200 ease-in-out">E4</button>
+
+                    </div>
+
+                    <!-- row E ends -->
+                    <!-- row F starts -->
+                    <div class="col-span-12 grid grid-cols-11 items-center gap-5">
+                        <p class="col-span-1">F</p>
+                        <button
+                            class="col-span-2 btn btn-md hover:bg-secondary hover:text-white transition-colors duration-200 ease-in-out">F1</button>
+                        <button
+                            class="col-span-2 btn btn-md hover:bg-secondary hover:text-white transition-colors duration-200 ease-in-out">F2</button>
+                        <p class="col-span-2"></p>
+                        <button
+                            class="col-span-2 btn btn-md hover:bg-secondary hover:text-white transition-colors duration-200 ease-in-out">F3</button>
+                        <button
+                            class="col-span-2 btn btn-md hover:bg-secondary hover:text-white transition-colors duration-200 ease-in-out">F4</button>
+
+                    </div>
+
+                    <!-- row F ends -->
+                    <!-- row G starts -->
+                    <div class="col-span-12 grid grid-cols-11 items-center gap-5">
+                        <p class="col-span-1">G</p>
+                        <button
+                            class="col-span-2 btn btn-md hover:bg-secondary hover:text-white transition-colors duration-200 ease-in-out">G1</button>
+                        <button
+                            class="col-span-2 btn btn-md hover:bg-secondary hover:text-white transition-colors duration-200 ease-in-out">G2</button>
+                        <p class="col-span-2"></p>
+                        <button
+                            class="col-span-2 btn btn-md hover:bg-secondary hover:text-white transition-colors duration-200 ease-in-out">G3</button>
+                        <button
+                            class="col-span-2 btn btn-md hover:bg-secondary hover:text-white transition-colors duration-200 ease-in-out">G4</button>
+
+                    </div>
+
+                    <!-- row G ends -->
+                    <!-- row H starts -->
+                    <div class="col-span-12 grid grid-cols-11 items-center gap-5">
+                        <p class="col-span-1">H</p>
+                        <button
+                            class="col-span-2 btn btn-md hover:bg-secondary hover:text-white transition-colors duration-200 ease-in-out">H1</button>
+                        <button
+                            class="col-span-2 btn btn-md hover:bg-secondary hover:text-white transition-colors duration-200 ease-in-out">H2</button>
+                        <p class="col-span-2"></p>
+                        <button
+                            class="col-span-2 btn btn-md hover:bg-secondary hover:text-white transition-colors duration-200 ease-in-out">H3</button>
+                        <button
+                            class="col-span-2 btn btn-md hover:bg-secondary hover:text-white transition-colors duration-200 ease-in-out">H4</button>
+
+                    </div>
+                    <!-- row H ends -->
+                    <!-- row I starts -->
+                    <div class="col-span-12 grid grid-cols-11 items-center gap-5">
+                        <p class="col-span-1">I</p>
+                        <button
+                            class="col-span-2 btn btn-md hover:bg-secondary hover:text-white transition-colors duration-200 ease-in-out">I1</button>
+                        <button
+                            class="col-span-2 btn btn-md hover:bg-secondary hover:text-white transition-colors duration-200 ease-in-out">I2</button>
+                        <p class="col-span-2"></p>
+                        <button
+                            class="col-span-2 btn btn-md hover:bg-secondary hover:text-white transition-colors duration-200 ease-in-out">I3</button>
+                        <button
+                            class="col-span-2 btn btn-md hover:bg-secondary hover:text-white transition-colors duration-200 ease-in-out">I4</button>
+
+                    </div>
+                    <!-- row I ends -->
+                    <!-- row J starts -->
+                    <div class="col-span-12 grid grid-cols-11 items-center gap-5">
+                        <p class="col-span-1">J</p>
+                        <button
+                            class="col-span-2 btn btn-md hover:bg-secondary hover:text-white transition-colors duration-200 ease-in-out">J1</button>
+                        <button
+                            class="col-span-2 btn btn-md hover:bg-secondary hover:text-white transition-colors duration-200 ease-in-out">J2</button>
+                        <p class="col-span-2"></p>
+                        <button
+                            class="col-span-2 btn btn-md hover:bg-secondary hover:text-white transition-colors duration-200 ease-in-out">J3</button>
+                        <button
+                            class="col-span-2 btn btn-md hover:bg-secondary hover:text-white transition-colors duration-200 ease-in-out">J4</button>
+
+                    </div>
+                    <!-- row J starts -->
+
+                </section>
+                <!-- seat section ends here -->
+
+            </div>
+            <!-- left div ends -->
+            <div class="bg-red-600">Input section</div>
+
+
+        </section>
+        <!-- seat booking section ends -->
+
+    </main>
+
+    <script src="js/app.js"></script>
 </body>
 
 </html>
