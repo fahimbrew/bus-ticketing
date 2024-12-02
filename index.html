@@ -479,7 +479,120 @@
                     <h2 class="text-xl font-semibold">Book Your Seat</h2>
                 </div>
                 <div class="my-3 border-b-2 border-dashed"></div>
+                <!-- form starts -->
+                <section class="font-Inter">
+                    <div class="bg-[#f7f8f8] shadow-xl p-8 rounded-xl">
+                        <h3 class="flex justify-between">
+                            <p class="flex">
+                                <span>Seat</span>
+                                <span
+                                    class="bg-primary text-normal h-4 w-4 text-white rounded-full p-2 flex items-center justify-center">0</span>
+                            </p>
+                            <p>Class</p>
+                            <p>Price</p>
+                        </h3>
+                        <div class="my-3 border-b-2 border-dashed"></div>
+                        <ul class="space-y-5">
+                            <h3 class="text-3xl font-semibold text-center capitalize text-error">No Seat Booked</h3>
+                        </ul>
+                        <div class="my-3 border-b-2 border-dashed"></div>
+                        <div class="text-lg font-semibold flex justify-between">
+                            <p>Total Price</p>
+                            <p>
+                                <span>BDT:</span>
+                                <span>****</span>
+                            </p>
+                        </div>
+                        <div class="my-3 border-b-2 border-dashed"></div>
+                        <!-- input coupon -->
+                        <div class="flex items-center py-2 text-lg justify-between">
+                            <input disabled type="text" placeholder="Have any coupon?"
+                                class="p-3 rounded-lg w-full outline-0">
+                            <button disabled class="btn btn-md bg-primary text-white">Apply</button>
+                        </div>
+                        <!-- input coupon ends -->
+                        <div class="my-3 border-b-2 border-dashed"></div>
+                        <div class="text-lg font-semibold flex justify-between">
+                            <p>Grand Total</p>
+                            <p>
+                                <span>BDT:</span>
+                                <span>****</span>
+                            </p>
+                        </div>
+                        <!-- log in form starts -->
+                        <div class=" w-full shrink-0">
+                            <form class="card-body">
+                                <div class="form-control">
+                                    <label class="label">
+                                        <span class="label-text">Passenger Name*</span>
+                                    </label>
+                                    <input type="text" placeholder="Enter Your Name"
+                                        class="input input-bordered text-xs" required />
+                                </div>
+                                <div class="form-control">
+                                    <label class="label">
+                                        <span class="label-text">Phone Number*</span>
+                                    </label>
+                                    <input type="number" placeholder="Enter Your Phone Number"
+                                        class="input input-bordered text-xs" required />
+
+
+                                    <div class="form-control">
+                                        <label class="label">
+                                            <span class="label-text">Email ID</span>
+                                        </label>
+                                        <input type="number" placeholder="Enter Your Email ID"
+                                            class="input input-bordered text-xs" required />
+
+                                    </div>
+                                    <div class="form-control mt-6">
+                                        <button disabled onclick="my_modal_2.showModal()"
+                                            class="uppercase btn bg-primary text-white border-none">Next</button>
+                                        <!-- modal start -->
+                                        <!-- Open the modal using ID.showModal() method -->
+
+                                        <dialog id="my_modal_2" class="modal">
+                                            <div class="modal-box flex flex-col gap-2 justify-center items-center">
+                                                <img src="images/success.png" alt="">
+                                                <h3 class="text-2xl font-bold text-center">Congratulations</h3>
+                                                <p class="py-4">Thank you for booking our bus seats.We are working hard
+                                                    to find the best deals for you. Have a great journey.</p>
+                                                <small>Shortly you will be followed through a confirmation
+                                                    email.</small>
+                                                <div class="modal-action">
+                                                    <form method="dialog">
+                                                        <!-- if there is a button in form, it will close the modal -->
+                                                        <button class="bg-primary text-white btn">Continue</button>
+                                                    </form>
+                                                </div>
+
+
+                                            </div>
+
+
+                                        </dialog>
+                                        <!-- modal ends -->
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <label class="label">
+                                            <a href="#" class="label-text-alt link link-hover underline">Terms and
+                                                Conditions</a>
+                                        </label>
+                                        <label class="label">
+                                            <a href="#" class="label-text-alt link link-hover underline">Cancellation
+                                                Policy</a>
+                                        </label>
+
+                                    </div>
+                            </form>
+                        </div>
+                        <!-- log in form ends -->
+                    </div>
+
+                </section>
+                <!-- form ends -->
             </div>
+
             <!-- input ends here -->
 
 
